@@ -26,7 +26,7 @@ const {
 
 const propTypes = {
   dispatch: PropTypes.func,
-  backAndroidHandler: PropTypes.func,
+  BackHandler: PropTypes.func,
   onBackAndroid: PropTypes.func,
   onExitApp: PropTypes.func,
 };
@@ -66,13 +66,13 @@ class Router extends Component {
 
   handleBackAndroid() {
     const {
-      backAndroidHandler,
+      BackHandler,
       onBackAndroid,
       onExitApp,
     } = this.props;
     // optional for customizing handler
-    if (backAndroidHandler) {
-      return backAndroidHandler();
+    if (BackHandler) {
+      return BackHandler();
     }
 
     try {
